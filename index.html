@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HMCTricker – Ethical Hacker · Developer · Marketer</title>
+  <meta name="description" content="HMCTricker – Thương hiệu công nghệ cá nhân chuyên cung cấp dịch vụ Facebook Marketing, TikTok Marketing, Bảo mật, Website và đào tạo lập trình." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="HMCTricker" />
+  <meta property="og:description" content="Ethical Hacker · Developer · Marketer" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- LOADING SCREEN                                                      -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="loading-screen">
+  <img id="loading-logo" src="assets/images/logo.png" alt="HMCTricker" />
+  <div id="loading-bar-track">
+    <div id="loading-bar"></div>
+  </div>
+  <p id="loading-text" class="font-mono">Initializing HMCTricker System... <span id="loading-percent">0%</span></p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- MUSIC PROMPT MODAL                                                  -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="music-prompt-overlay">
+  <div class="music-prompt-box">
+    <p class="music-prompt-question">Bạn có muốn bật nhạc không?</p>
+    <div class="music-prompt-btns">
+      <button id="music-prompt-no" class="btn-outline">Không, cảm ơn</button>
+      <button id="music-prompt-yes" class="btn-primary">Có</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- HEADER                                                              -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<header id="header">
+  <div class="container header-inner">
+    <!-- Logo -->
+    <a href="#home">
+      <img id="header-logo" src="assets/images/logo.png" alt="HMCTricker" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul id="nav-links">
+      <li><a href="#home">Trang chủ</a></li>
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#services">Dịch vụ</a></li>
+      <li><a href="#courses">Khóa học</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+
+    <!-- Desktop CTAs -->
+    <div id="header-ctas">
+      <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="btn-outline">Discord</a>
+      <a href="https://www.tiktok.com/@hmctricker" target="_blank" rel="noreferrer" class="btn-primary">TikTok</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="hamburger-btn" aria-label="Mở menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Backdrop -->
+<div id="menu-backdrop"></div>
+
+<!-- Mobile Drawer -->
+<div id="mobile-drawer" role="dialog" aria-label="Menu điều hướng">
+  <div class="drawer-header">
+    <img class="drawer-logo" src="assets/images/logo.png" alt="HMCTricker" />
+    <button id="close-menu-btn" aria-label="Đóng menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <nav class="drawer-nav">
+    <a href="#home"     class="mobile-nav-link"><span class="dot"></span>Trang chủ</a>
+    <a href="#about"    class="mobile-nav-link"><span class="dot"></span>Giới thiệu</a>
+    <a href="#services" class="mobile-nav-link"><span class="dot"></span>Dịch vụ</a>
+    <a href="#courses"  class="mobile-nav-link"><span class="dot"></span>Khóa học</a>
+    <a href="#faq"      class="mobile-nav-link"><span class="dot"></span>FAQ</a>
+    <a href="#contact"  class="mobile-nav-link"><span class="dot"></span>Liên hệ</a>
+  </nav>
+
+  <div class="drawer-divider"></div>
+
+  <div class="drawer-ctas">
+    <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="btn-outline mobile-nav-link">
+      <i class="fa-brands fa-discord"></i> Discord
+    </a>
+    <a href="https://www.tiktok.com/@hmctricker" target="_blank" rel="noreferrer" class="btn-primary mobile-nav-link">
+      <i class="fa-brands fa-tiktok"></i> TikTok
+    </a>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- HERO                                                                -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="hero-content">
+    <!-- Logo -->
+    <img src="assets/images/logo.png" alt="HMCTricker" style="width:200px;height:200px;object-fit:contain;margin:0 auto 24px;" />
+
+    <div class="hero-badge">⚡ Ethical Hacker &bull; Developer &bull; Marketer</div>
+
+    <h1 class="hero-title">HMCTRICKER</h1>
+
+    <div class="hero-typing-line">
+      <span>&gt;&nbsp;<span id="typing-text"></span><span class="hero-typing-cursor">_</span></span>
+    </div>
+
+    <p class="hero-desc">
+      Thương hiệu công nghệ cá nhân – Chia sẻ kiến thức, đào tạo và phát triển website chuyên nghiệp.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#services" class="btn-primary">Xem dịch vụ</a>
+      <a href="#courses"  class="btn-outline">Khóa học</a>
+    </div>
+
+    <div class="hero-socials">
+      <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="hero-social-link">
+        <i class="fa-brands fa-discord"></i> Discord
+      </a>
+      <a href="https://www.tiktok.com/@hmctricker" target="_blank" rel="noreferrer" class="hero-social-link">
+        <i class="fa-brands fa-tiktok"></i> TikTok
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll"><i class="fa-solid fa-chevron-down"></i></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- STATS                                                               -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid reveal">
+      <div class="glass-card stat-card">
+        <div class="stat-number"><span class="counter" data-target="10" data-suffix="+">0+</span></div>
+        <div class="stat-label">Dịch vụ</div>
+      </div>
+      <div class="glass-card stat-card">
+        <div class="stat-number"><span class="counter" data-target="3" data-suffix="">0</span></div>
+        <div class="stat-label">Khóa học</div>
+      </div>
+      <div class="glass-card stat-card">
+        <div class="stat-number"><span class="counter" data-target="500" data-suffix="+">0+</span></div>
+        <div class="stat-label">Học viên</div>
+      </div>
+      <div class="glass-card stat-card">
+        <div class="stat-number"><span class="counter" data-target="100" data-suffix="+">0+</span></div>
+        <div class="stat-label">Khách hàng</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- ABOUT                                                               -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section id="about" class="section-py">
+  <div class="container">
+    <div class="about-grid reveal">
+      <!-- Text -->
+      <div>
+        <h2 class="about-title">VỀ <span class="gradient-text">HMCTRICKER</span></h2>
+        <p class="about-text">
+          HMCTricker không chỉ là một cái tên, mà là một thương hiệu công nghệ đại diện cho sự chuyên nghiệp, an toàn và phát triển. Được sáng lập bởi Hoàng Minh Chiến Tricker, chúng tôi mang đến những giải pháp thực chiến nhất.
+        </p>
+        <p class="about-text">
+          Từ Ethical Hacking, bảo mật hệ thống, đến xây dựng website và triển khai các chiến dịch Facebook Marketing hiệu quả. Chúng tôi cam kết tạo ra giá trị thực qua các dịch vụ chất lượng và chương trình đào tạo tận tâm, hỗ trợ cộng đồng phát triển bền vững.
+        </p>
+        <div class="skills-wrap">
+          <span class="skill-tag">HTML/CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Facebook Marketing</span>
+          <span class="skill-tag">SEO</span>
+          <span class="skill-tag">Security</span>
+          <span class="skill-tag">Web Development</span>
+          <span class="skill-tag">Community Building</span>
+        </div>
+      </div>
+
+      <!-- Terminal -->
+      <div class="terminal-wrapper">
+        <div class="terminal-glow"></div>
+        <div class="glass-card terminal-card">
+          <div class="terminal-bar">
+            <span class="terminal-dot terminal-dot-r"></span>
+            <span class="terminal-dot terminal-dot-y"></span>
+            <span class="terminal-dot terminal-dot-g"></span>
+            <span class="terminal-title">guest@hmctricker:~</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-cmd">$&gt; whoami</div>
+            <div class="terminal-out" style="margin-bottom:16px">hmctricker_admin</div>
+            <div class="terminal-cmd">$&gt; ./show_stats.sh</div>
+            <div class="terminal-sub" style="margin-bottom:16px">
+              [+] Loading modules...<br/>
+              [+] Status: <span class="terminal-success">ONLINE</span><br/>
+              [+] Focus: Security, Dev, Marketing<br/>
+              [+] Passion: 100%
+            </div>
+            <div class="terminal-cmd">$&gt; echo "Trust the process"</div>
+            <div class="terminal-out" style="margin-bottom:16px">Trust the process</div>
+            <div class="terminal-cmd">$&gt; <span class="terminal-cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- FIELDS                                                              -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section id="fields" class="section-py">
+  <div class="container">
+    <h2 class="section-title">LĨNH VỰC <span class="gradient-text">HOẠT ĐỘNG</span></h2>
+    <div class="fields-grid reveal">
+      <div class="glass-card field-card">
+        <div class="field-icon-wrap"><i class="fa-solid fa-share-nodes field-icon"></i></div>
+        <div class="field-title">Facebook Marketing</div>
+        <div class="field-desc">Xây dựng và phát triển cộng đồng.</div>
+      </div>
+      <div class="glass-card field-card">
+        <div class="field-icon-wrap"><i class="fa-solid fa-video field-icon"></i></div>
+        <div class="field-title">TikTok Marketing</div>
+        <div class="field-desc">Sáng tạo nội dung, tăng tương tác.</div>
+      </div>
+      <div class="glass-card field-card">
+        <div class="field-icon-wrap"><i class="fa-solid fa-globe field-icon"></i></div>
+        <div class="field-title">Website Development</div>
+        <div class="field-desc">Thiết kế website đa ngành nghề.</div>
+      </div>
+      <div class="glass-card field-card">
+        <div class="field-icon-wrap"><i class="fa-solid fa-code field-icon"></i></div>
+        <div class="field-title">HTML/CSS/JS</div>
+        <div class="field-desc">Lập trình giao diện chuyên nghiệp.</div>
+      </div>
+      <div class="glass-card field-card">
+        <div class="field-icon-wrap"><i class="fa-solid fa-database field-icon"></i></div>
+        <div class="field-title">Full Stack</div>
+        <div class="field-desc">Phát triển ứng dụng toàn diện.</div>
+      </div>
+      <div class="glass-card field-card">
+        <div class="field-icon-wrap"><i class="fa-solid fa-magnifying-glass field-icon"></i></div>
+        <div class="field-title">SEO</div>
+        <div class="field-desc">Tối ưu hóa công cụ tìm kiếm.</div>
+      </div>
+      <div class="glass-card field-card">
+        <div class="field-icon-wrap"><i class="fa-solid fa-shield-halved field-icon"></i></div>
+        <div class="field-title">Security Services</div>
+        <div class="field-desc">Bảo vệ tài khoản và hệ thống.</div>
+      </div>
+      <div class="glass-card field-card">
+        <div class="field-icon-wrap"><i class="fa-solid fa-terminal field-icon"></i></div>
+        <div class="field-title">Ethical Hacking</div>
+        <div class="field-desc">Kiểm thử và đánh giá bảo mật.</div>
+      </div>
+      <div class="glass-card field-card">
+        <div class="field-icon-wrap"><i class="fa-solid fa-laptop field-icon"></i></div>
+        <div class="field-title">Programming</div>
+        <div class="field-desc">Đào tạo lập trình bài bản.</div>
+      </div>
+      <div class="glass-card field-card">
+        <div class="field-icon-wrap"><i class="fa-solid fa-dollar-sign field-icon"></i></div>
+        <div class="field-title">MMO</div>
+        <div class="field-desc">Kiếm tiền online hiệu quả.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- SERVICES                                                            -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section id="services" class="section-py">
+  <div class="container">
+    <h2 class="section-title">DỊCH VỤ <span class="gradient-text">NỔI BẬT</span></h2>
+
+    <div class="services-controls">
+      <div class="search-bar-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="service-search" class="search-bar" type="text" placeholder="Tìm dịch vụ..." />
+      </div>
+      <div class="filter-chips">
+        <button class="filter-chip service-filter-chip active" data-filter="All">All</button>
+        <button class="filter-chip service-filter-chip" data-filter="Facebook">Facebook</button>
+        <button class="filter-chip service-filter-chip" data-filter="TikTok">TikTok</button>
+        <button class="filter-chip service-filter-chip" data-filter="Zalo">Zalo</button>
+        <button class="filter-chip service-filter-chip" data-filter="Khóa học">Khóa học</button>
+        <button class="filter-chip service-filter-chip" data-filter="Bảo mật">Bảo mật</button>
+        <button class="filter-chip service-filter-chip" data-filter="Website">Website</button>
+      </div>
+    </div>
+
+    <div class="services-grid reveal">
+      <div class="glass-card service-card" data-title="Facebook Marketing" data-desc="Phát triển Fanpage và cộng đồng Facebook." data-category="Facebook">
+        <div class="service-icon-wrap"><i class="fa-solid fa-chart-bar"></i></div>
+        <h3>Facebook Marketing</h3>
+        <p>Phát triển Fanpage và cộng đồng Facebook.</p>
+        <a href="#pricing" class="service-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="glass-card service-card" data-title="TikTok Marketing" data-desc="Tăng tương tác và người theo dõi TikTok." data-category="TikTok">
+        <div class="service-icon-wrap"><i class="fa-solid fa-video"></i></div>
+        <h3>TikTok Marketing</h3>
+        <p>Tăng tương tác và người theo dõi TikTok.</p>
+        <a href="#pricing" class="service-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="glass-card service-card" data-title="Bảo mật Facebook" data-desc="Hỗ trợ bảo mật và khôi phục tài khoản." data-category="Bảo mật">
+        <div class="service-icon-wrap"><i class="fa-solid fa-shield"></i></div>
+        <h3>Bảo mật Facebook</h3>
+        <p>Hỗ trợ bảo mật và khôi phục tài khoản.</p>
+        <a href="#pricing" class="service-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="glass-card service-card" data-title="Bảo mật TikTok" data-desc="Bảo vệ tài khoản TikTok khỏi rủi ro." data-category="Bảo mật">
+        <div class="service-icon-wrap"><i class="fa-solid fa-lock"></i></div>
+        <h3>Bảo mật TikTok</h3>
+        <p>Bảo vệ tài khoản TikTok khỏi rủi ro.</p>
+        <a href="#pricing" class="service-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="glass-card service-card" data-title="Bảo mật Zalo" data-desc="Bảo mật và hỗ trợ tài khoản Zalo." data-category="Zalo">
+        <div class="service-icon-wrap"><i class="fa-solid fa-message"></i></div>
+        <h3>Bảo mật Zalo</h3>
+        <p>Bảo mật và hỗ trợ tài khoản Zalo.</p>
+        <a href="#pricing" class="service-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="glass-card service-card" data-title="Thiết kế Website" data-desc="Website cá nhân, doanh nghiệp, landing page." data-category="Website">
+        <div class="service-icon-wrap"><i class="fa-solid fa-globe"></i></div>
+        <h3>Thiết kế Website</h3>
+        <p>Website cá nhân, doanh nghiệp, landing page.</p>
+        <a href="#pricing" class="service-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="glass-card service-card" data-title="Khóa học Facebook" data-desc="Học Facebook Marketing từ cơ bản đến nâng cao." data-category="Khóa học">
+        <div class="service-icon-wrap"><i class="fa-solid fa-book-open"></i></div>
+        <h3>Khóa học Facebook</h3>
+        <p>Học Facebook Marketing từ cơ bản đến nâng cao.</p>
+        <a href="#courses" class="service-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="glass-card service-card" data-title="Lập trình" data-desc="Học lập trình web và phần mềm." data-category="Khóa học">
+        <div class="service-icon-wrap"><i class="fa-solid fa-code"></i></div>
+        <h3>Lập trình</h3>
+        <p>Học lập trình web và phần mềm.</p>
+        <a href="#courses" class="service-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div id="no-services" style="display:none;grid-column:1/-1;text-align:center;padding:48px 0;color:var(--text-sub);">
+        Không tìm thấy dịch vụ phù hợp với từ khóa tìm kiếm.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- PRICING                                                             -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section id="pricing">
+  <div class="container">
+    <h2 class="section-title">BẢNG GIÁ <span class="gradient-text">DỊCH VỤ</span></h2>
+
+    <!-- Tabs -->
+    <div class="pricing-tabs">
+      <button class="pricing-tab active" data-tab="Facebook">Facebook Marketing</button>
+      <button class="pricing-tab" data-tab="TikTok">TikTok Marketing</button>
+      <button class="pricing-tab" data-tab="Security">Bảo mật</button>
+      <button class="pricing-tab" data-tab="Web">Website &amp; SEO</button>
+    </div>
+
+    <!-- ── Facebook Panel ─────────────────────────────────────────── -->
+    <div id="pricing-panel-Facebook" class="pricing-panel active reveal">
+      <div class="pricing-cards-grid">
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Follow Tây</div>
+          <div class="pricing-card-qty">1.000 Follow</div>
+          <div class="pricing-card-price">20.000 VNĐ</div>
+          <div class="pricing-card-warranty">Bảo hành 30 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Follow Việt</div>
+          <div class="pricing-card-qty">1.000 Follow</div>
+          <div class="pricing-card-price">25.000 VNĐ</div>
+          <div class="pricing-card-warranty">Bảo hành 30 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-badge">🎯 Tiết kiệm</div>
+          <div class="pricing-card-name">100k Follow Tây</div>
+          <div class="pricing-card-qty">100.000 Follow</div>
+          <div class="pricing-card-price">500.000 VNĐ</div>
+          <div class="pricing-card-warranty">Liên hệ</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-badge">🎯 Tiết kiệm</div>
+          <div class="pricing-card-name">100k Follow Việt</div>
+          <div class="pricing-card-qty">100.000 Follow</div>
+          <div class="pricing-card-price">900.000 VNĐ</div>
+          <div class="pricing-card-warranty">Liên hệ</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Thành viên Group Việt</div>
+          <div class="pricing-card-qty">1.000 Thành viên</div>
+          <div class="pricing-card-price">25.000 VNĐ</div>
+          <div class="pricing-card-warranty">120 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Thành viên Group Ngoại</div>
+          <div class="pricing-card-qty">1.000 Thành viên</div>
+          <div class="pricing-card-price">35.000 VNĐ</div>
+          <div class="pricing-card-warranty">120 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Cảm xúc Bài viết</div>
+          <div class="pricing-card-qty">1.000 Cảm xúc</div>
+          <div class="pricing-card-price">20.000 VNĐ</div>
+          <div class="pricing-card-warranty">7 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-badge">🔥 Phổ biến</div>
+          <div class="pricing-card-name">Bình luận tự động</div>
+          <div class="pricing-card-qty">1.000 Bình luận</div>
+          <div class="pricing-card-price">100.000 VNĐ</div>
+          <div class="pricing-card-warranty">30 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-badge">⭐ Khuyên dùng</div>
+          <div class="pricing-card-name">Bình luận theo yêu cầu</div>
+          <div class="pricing-card-qty">1.000 Bình luận</div>
+          <div class="pricing-card-price">300.000 VNĐ</div>
+          <div class="pricing-card-warranty">30 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Mắt xem Reels</div>
+          <div class="pricing-card-qty">1.000 Mắt</div>
+          <div class="pricing-card-price">2.000 VNĐ</div>
+          <div class="pricing-card-warranty dimmed">Không bảo hành</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Share Reels</div>
+          <div class="pricing-card-qty">1.000 Share</div>
+          <div class="pricing-card-price">15.000 VNĐ</div>
+          <div class="pricing-card-warranty dimmed">Không bảo hành</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Mắt xem Story</div>
+          <div class="pricing-card-qty">1.000 Mắt</div>
+          <div class="pricing-card-price">20.000 VNĐ</div>
+          <div class="pricing-card-warranty">7 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Cảm xúc Story</div>
+          <div class="pricing-card-qty">1.000 Cảm xúc</div>
+          <div class="pricing-card-price">20.000 VNĐ</div>
+          <div class="pricing-card-warranty">7 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+      </div>
+    </div><!-- /Facebook -->
+
+    <!-- ── TikTok Panel ────────────────────────────────────────────── -->
+    <div id="pricing-panel-TikTok" class="pricing-panel reveal">
+      <div class="pricing-cards-grid">
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">View</div>
+          <div class="pricing-card-qty">1.000 View</div>
+          <div class="pricing-card-price">15.000 VNĐ</div>
+          <div class="pricing-card-warranty">30 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Share</div>
+          <div class="pricing-card-qty">1.000 Share</div>
+          <div class="pricing-card-price">10.000 VNĐ</div>
+          <div class="pricing-card-warranty">30 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Follow Việt</div>
+          <div class="pricing-card-qty">1.000 Follow</div>
+          <div class="pricing-card-price">25.000 VNĐ</div>
+          <div class="pricing-card-warranty dimmed">Không bảo hành</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-badge">🔥 Phổ biến</div>
+          <div class="pricing-card-name">Follow Tây</div>
+          <div class="pricing-card-qty">1.000 Follow</div>
+          <div class="pricing-card-price">50.000 VNĐ</div>
+          <div class="pricing-card-warranty">30 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Tim Video</div>
+          <div class="pricing-card-qty">1.000 Tim</div>
+          <div class="pricing-card-price">20.000 VNĐ</div>
+          <div class="pricing-card-warranty">30 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Tim Bình luận</div>
+          <div class="pricing-card-qty">1.000 Tim</div>
+          <div class="pricing-card-price">20.000 VNĐ</div>
+          <div class="pricing-card-warranty">30 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Bình luận ngẫu nhiên</div>
+          <div class="pricing-card-qty">1.000 Bình luận</div>
+          <div class="pricing-card-price">60.000 VNĐ</div>
+          <div class="pricing-card-warranty">30 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-badge">⭐ Khuyên dùng</div>
+          <div class="pricing-card-name">Bình luận theo yêu cầu</div>
+          <div class="pricing-card-qty">1.000 Bình luận</div>
+          <div class="pricing-card-price">300.000 VNĐ</div>
+          <div class="pricing-card-warranty">30 ngày</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+      </div>
+
+      <!-- Live Stream TikTok CTA -->
+      <div class="glass-card tiktok-live-cta">
+        <div>
+          <h3 style="font-size:1.2rem;font-weight:700;color:var(--text-white);margin-bottom:8px;">Live Stream TikTok</h3>
+          <p style="color:var(--text-sub);font-size:0.9rem;">Giải pháp tăng mắt xem, tương tác và chia sẻ cho phiên live của bạn.</p>
+        </div>
+        <a href="https://www.tiktok.com/@hmctricker" target="_blank" rel="noreferrer" class="btn-primary" style="white-space:nowrap;">
+          <i class="fa-brands fa-tiktok"></i> Liên hệ tư vấn
+        </a>
+      </div>
+    </div><!-- /TikTok -->
+
+    <!-- ── Security Panel ─────────────────────────────────────────── -->
+    <div id="pricing-panel-Security" class="pricing-panel reveal">
+
+      <!-- FACEBOOK -->
+      <div class="security-platform glass-card" style="padding:32px;">
+        <div class="security-platform-title">
+          <i class="fa-brands fa-facebook"></i> FACEBOOK
+        </div>
+
+        <div class="security-group">
+          <div class="security-group-title">DAME FACEBOOK</div>
+          <div class="security-group-note">Chỉ dame acc có dấu hiệu SCAM và acc không dùng nữa.</div>
+          <table class="security-table">
+            <tr><td>1 Profile</td><td>250.000 VNĐ</td></tr>
+            <tr><td>1 Chuyên nghiệp</td><td>300.000 VNĐ</td></tr>
+            <tr><td>1 Khoá TCN</td><td>350.000 VNĐ</td></tr>
+            <tr><td>1 Avatar mặc định</td><td>300.000 VNĐ</td></tr>
+            <tr><td>1 Page dưới 500k Follow</td><td>400.000 VNĐ</td></tr>
+            <tr><td>Page trên 500k Follow</td><td>Trên 1.000.000 VNĐ</td></tr>
+            <tr><td>Profile Tick xanh</td><td>Trên 700.000 VNĐ</td></tr>
+            <tr><td>Chuyên nghiệp Tick xanh</td><td>Trên 1.000.000 VNĐ</td></tr>
+          </table>
+          <div class="security-subgroup-title">Group</div>
+          <table class="security-table">
+            <tr><td>Group dưới 100k thành viên</td><td>Dưới 1.000.000 VNĐ</td></tr>
+            <tr><td>Group trên 100k thành viên</td><td>Trên 1.000.000 VNĐ</td></tr>
+          </table>
+        </div>
+
+        <div class="security-group">
+          <div class="security-group-title">UNL FACEBOOK</div>
+          <div class="security-subgroup-title">Chính chủ</div>
+          <table class="security-table">
+            <tr><td>956</td><td>250.000 VNĐ</td></tr>
+            <tr><td>282 chưa kháng</td><td>250.000 VNĐ</td></tr>
+            <tr><td>282 đã kháng đang treo</td><td>400.000 VNĐ</td></tr>
+            <tr><td>FAQ Tiêu chuẩn cộng đồng</td><td>500.000 VNĐ</td></tr>
+            <tr><td>FAQ dạng khác</td><td>Trên 600.000 VNĐ</td></tr>
+          </table>
+          <div class="security-subgroup-title">Không chính chủ</div>
+          <table class="security-table">
+            <tr><td>956</td><td>400.000 VNĐ</td></tr>
+            <tr><td>282 chưa kháng</td><td>500.000 VNĐ</td></tr>
+            <tr><td>282 đã kháng đang treo</td><td>600.000 VNĐ</td></tr>
+            <tr><td>FAQ Tiêu chuẩn cộng đồng</td><td>700.000 VNĐ</td></tr>
+            <tr><td>FAQ dạng khác</td><td>Trên 750.000 VNĐ</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- TIKTOK -->
+      <div class="security-platform glass-card" style="padding:32px;margin-top:24px;">
+        <div class="security-platform-title">
+          <i class="fa-brands fa-tiktok"></i> TIKTOK
+        </div>
+
+        <div class="security-group">
+          <div class="security-group-title">DAME TIKTOK</div>
+          <div class="security-group-note">Chỉ dame acc có dấu hiệu SCAM và acc không dùng nữa.</div>
+          <table class="security-table">
+            <tr><td>Profile dưới 100k Follow</td><td>300.000 VNĐ</td></tr>
+            <tr><td>Profile trên 100k Follow</td><td>Trên 400.000 VNĐ</td></tr>
+            <tr><td>TikTok doanh nghiệp</td><td>Trên 400.000 VNĐ</td></tr>
+            <tr><td>TikTok Tick xanh</td><td>Trên 800.000 VNĐ</td></tr>
+          </table>
+        </div>
+
+        <div class="security-group">
+          <div class="security-group-title">UNL TIKTOK</div>
+          <div class="security-subgroup-title">Chính chủ</div>
+          <table class="security-table">
+            <tr><td>Giới hạn độ tuổi</td><td>200.000 VNĐ</td></tr>
+            <tr><td>Khoá vĩnh viễn</td><td>Trên 400.000 VNĐ</td></tr>
+          </table>
+          <div class="security-subgroup-title">Không chính chủ</div>
+          <table class="security-table">
+            <tr><td>Giới hạn độ tuổi</td><td>300.000 VNĐ</td></tr>
+            <tr><td>Khoá vĩnh viễn</td><td>Trên 500.000 VNĐ</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- ZALO -->
+      <div class="security-platform glass-card" style="padding:32px;margin-top:24px;">
+        <div class="security-platform-title">
+          <i class="fa-solid fa-comment-dots"></i> ZALO
+        </div>
+
+        <div class="security-group">
+          <div class="security-group-title">DAME ZALO</div>
+          <div class="security-group-note">Chỉ dame acc có dấu hiệu SCAM và acc không dùng nữa.</div>
+          <table class="security-table">
+            <tr><td>Profile thường</td><td>400.000 VNĐ</td></tr>
+            <tr><td>Zalo Business</td><td>Trên 600.000 VNĐ</td></tr>
+          </table>
+        </div>
+
+        <div class="security-group">
+          <div class="security-group-title">UNL ZALO</div>
+          <div class="security-subgroup-title">Chính chủ</div>
+          <table class="security-table">
+            <tr><td>Bị khoá vĩnh viễn</td><td>400.000 VNĐ</td></tr>
+          </table>
+          <div class="security-subgroup-title">Không chính chủ</div>
+          <table class="security-table">
+            <tr><td>Bị khoá vĩnh viễn</td><td>450.000 VNĐ</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="security-footer-note">BỊ DẠNG KHÁC THÌ LIÊN HỆ ĐỂ HỖ TRỢ.</div>
+
+    </div><!-- /Security -->
+
+    <!-- ── Website Panel ──────────────────────────────────────────── -->
+    <div id="pricing-panel-Web" class="pricing-panel reveal">
+      <div class="pricing-cards-grid">
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Landing Page</div>
+          <div class="pricing-card-qty">Thiết kế theo yêu cầu</div>
+          <div class="pricing-card-price">Liên hệ báo giá</div>
+          <div class="pricing-card-warranty">Bảo trì trọn đời</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Website Cá Nhân</div>
+          <div class="pricing-card-qty">Portfolio / Blog</div>
+          <div class="pricing-card-price">Liên hệ báo giá</div>
+          <div class="pricing-card-warranty">Bảo trì trọn đời</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Website Doanh Nghiệp</div>
+          <div class="pricing-card-qty">Đầy đủ tính năng</div>
+          <div class="pricing-card-price">Liên hệ báo giá</div>
+          <div class="pricing-card-warranty">Bảo trì trọn đời</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Website Bán Hàng</div>
+          <div class="pricing-card-qty">Tích hợp thanh toán</div>
+          <div class="pricing-card-price">Liên hệ báo giá</div>
+          <div class="pricing-card-warranty">Bảo trì trọn đời</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Web App / Dashboard</div>
+          <div class="pricing-card-qty">Hệ thống quản lý</div>
+          <div class="pricing-card-price">Liên hệ báo giá</div>
+          <div class="pricing-card-warranty">Bảo trì trọn đời</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">SEO Website</div>
+          <div class="pricing-card-qty">Tối ưu tổng thể</div>
+          <div class="pricing-card-price">Liên hệ báo giá</div>
+          <div class="pricing-card-warranty">Báo cáo hàng tháng</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+        <div class="glass-card pricing-card">
+          <div class="pricing-card-name">Tối ưu Tốc độ</div>
+          <div class="pricing-card-qty">PageSpeed Insights</div>
+          <div class="pricing-card-price">Liên hệ báo giá</div>
+          <div class="pricing-card-warranty">Cam kết chỉ số</div>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="pricing-card-btn">Đặt dịch vụ</a>
+        </div>
+
+      </div>
+    </div><!-- /Website -->
+
+    <!-- Bottom CTA -->
+    <div class="glass-card pricing-cta" style="border-style:dashed;">
+      <h3 style="font-size:1.1rem;font-weight:700;color:var(--text-white);margin-bottom:12px;">Chưa tìm thấy dịch vụ phù hợp?</h3>
+      <p style="color:var(--text-sub);font-size:0.9rem;margin-bottom:24px;">Liên hệ trực tiếp với chúng tôi để được tư vấn các gói dịch vụ customize theo yêu cầu riêng của bạn.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;">
+        <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="btn-outline">
+          <i class="fa-brands fa-discord"></i> Discord
+        </a>
+        <a href="https://www.tiktok.com/@hmctricker" target="_blank" rel="noreferrer" class="btn-primary">
+          <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- COURSES                                                             -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section id="courses" class="section-py">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:64px;">
+      <h2 class="section-title" style="margin-bottom:12px;">KHÓA HỌC <span class="gradient-text">HMCTRICKER</span></h2>
+      <p style="color:var(--neon-magenta);font-size:1rem;">Học thực chiến – Kiến thức cập nhật – Hỗ trợ sau khóa học</p>
+    </div>
+
+    <div class="courses-grid reveal">
+
+      <!-- Course 1: Facebook Marketing -->
+      <div class="glass-card course-card">
+        <span class="course-badge-tag" style="background:var(--warning);color:#000;">🔥 Nổi bật</span>
+        <h3>Facebook Marketing</h3>
+        <div class="course-price">2.000.000 đ</div>
+        <p class="course-desc">Xây dựng hệ sinh thái Facebook bài bản, từ tối ưu hồ sơ, fanpage, cộng đồng đến quảng bá nội dung đúng đối tượng.</p>
+        <div class="course-content-title">Nội dung học:</div>
+        <ul class="course-items">
+          <li><i class="fa-solid fa-circle-check"></i>Tổng quan FB Marketing</li>
+          <li><i class="fa-solid fa-circle-check"></i>Xây dựng Fanpage chuẩn</li>
+          <li><i class="fa-solid fa-circle-check"></i>Quản lý cộng đồng</li>
+          <li><i class="fa-solid fa-circle-check"></i>Quảng cáo (Ads) cơ bản</li>
+          <li><i class="fa-solid fa-circle-check"></i>Phân tích dữ liệu</li>
+          <li><i class="fa-solid fa-circle-check"></i>Bảo vệ tài khoản</li>
+        </ul>
+        <div class="course-meta">
+          <div><span>Đối tượng:</span> Người mới, Chủ shop, Freelancer</div>
+          <div><span>Thời lượng:</span> 1 tháng học + 3 tháng hỗ trợ</div>
+        </div>
+        <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="btn-primary" style="width:100%;justify-content:center;">Đăng ký ngay</a>
+      </div>
+
+      <!-- Course 2: Lập trình Cơ bản -->
+      <div class="glass-card course-card">
+        <span class="course-badge-tag" style="background:var(--neon-magenta);color:#000;">⭐ Người mới</span>
+        <h3>Lập trình Cơ bản</h3>
+        <div class="course-price">1.000.000 đ</div>
+        <p class="course-desc">Từ zero đến làm được website. Nền tảng vững chắc để tiến xa hơn trong ngành lập trình.</p>
+        <div class="course-content-title">Nội dung học:</div>
+        <ul class="course-items">
+          <li><i class="fa-solid fa-circle-check"></i>HTML5 &amp; CSS3</li>
+          <li><i class="fa-solid fa-circle-check"></i>Responsive Design</li>
+          <li><i class="fa-solid fa-circle-check"></i>JavaScript &amp; DOM</li>
+          <li><i class="fa-solid fa-circle-check"></i>API cơ bản</li>
+          <li><i class="fa-solid fa-circle-check"></i>Git &amp; GitHub</li>
+          <li><i class="fa-solid fa-circle-check"></i>Python/PHP cơ bản</li>
+        </ul>
+        <div class="course-meta">
+          <div><span>Dự án:</span> Landing Page, Portfolio, Web cá nhân</div>
+          <div><span>Thời lượng:</span> 1 tháng học + 3 tháng hỗ trợ</div>
+        </div>
+        <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="btn-primary" style="width:100%;justify-content:center;">Đăng ký ngay</a>
+      </div>
+
+      <!-- Course 3: IT Nâng cao -->
+      <div class="glass-card course-card" style="border-color:rgba(124,58,237,0.5);background:rgba(124,58,237,0.04);">
+        <span class="course-badge-tag" style="background:var(--accent-purple);color:#fff;">💎 Chuyên sâu</span>
+        <h3>IT Nâng cao</h3>
+        <div class="course-price">3.000.000 đ</div>
+        <p class="course-desc">Full-stack web development — Front-end, Back-end, Database, Deploy, Cloud, Security.</p>
+        <div class="course-content-title">Nội dung học:</div>
+        <ul class="course-items">
+          <li><i class="fa-solid fa-circle-check"></i>React/Vue Front-end</li>
+          <li><i class="fa-solid fa-circle-check"></i>Node.js &amp; Express API</li>
+          <li><i class="fa-solid fa-circle-check"></i>Database &amp; SQL/NoSQL</li>
+          <li><i class="fa-solid fa-circle-check"></i>Deploy &amp; Cloud</li>
+          <li><i class="fa-solid fa-circle-check"></i>Bảo mật OWASP</li>
+          <li><i class="fa-solid fa-circle-check"></i>Quy trình dự án thực tế</li>
+        </ul>
+        <div class="course-meta">
+          <div><span>Yêu cầu:</span> Đã có nền tảng cơ bản</div>
+          <div><span>Dự án:</span> Dashboard, E-commerce, Web App</div>
+        </div>
+        <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="btn-primary" style="width:100%;justify-content:center;background:var(--accent-purple);">Đăng ký ngay</a>
+      </div>
+
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="glass-card comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>So sánh tính năng</th>
+            <th>FB Marketing</th>
+            <th>Lập trình Cơ bản</th>
+            <th>IT Nâng cao</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Phù hợp người mới</td>
+            <td><i class="fa-solid fa-circle-check check-pink"></i></td>
+            <td><i class="fa-solid fa-circle-check check-pink"></i></td>
+            <td><i class="fa-solid fa-circle-xmark cross"></i></td>
+          </tr>
+          <tr>
+            <td>Thực hành trên lớp</td>
+            <td><i class="fa-solid fa-circle-check check-pink"></i></td>
+            <td><i class="fa-solid fa-circle-check check-pink"></i></td>
+            <td><i class="fa-solid fa-circle-check check-purple"></i></td>
+          </tr>
+          <tr>
+            <td>Làm dự án thực tế</td>
+            <td style="color:var(--warning);">⭐</td>
+            <td><i class="fa-solid fa-circle-check check-pink"></i></td>
+            <td><i class="fa-solid fa-circle-check check-purple"></i></td>
+          </tr>
+          <tr>
+            <td>Làm ra website</td>
+            <td><i class="fa-solid fa-circle-xmark cross"></i></td>
+            <td><i class="fa-solid fa-circle-check check-pink"></i></td>
+            <td><i class="fa-solid fa-circle-check check-purple"></i></td>
+          </tr>
+          <tr>
+            <td>Kiến thức SEO</td>
+            <td style="color:var(--warning);">⭐</td>
+            <td style="color:var(--warning);">⭐</td>
+            <td><i class="fa-solid fa-circle-check check-purple"></i></td>
+          </tr>
+          <tr>
+            <td>Hỗ trợ sau khóa</td>
+            <td><i class="fa-solid fa-circle-check check-pink"></i></td>
+            <td><i class="fa-solid fa-circle-check check-pink"></i></td>
+            <td><i class="fa-solid fa-circle-check check-purple"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Benefits -->
+    <div class="course-benefits reveal">
+      <span class="benefit-tag"><i class="fa-solid fa-circle-check"></i> Tài liệu học tập đầy đủ</span>
+      <span class="benefit-tag"><i class="fa-solid fa-circle-check"></i> Ví dụ thực tế sinh động</span>
+      <span class="benefit-tag"><i class="fa-solid fa-circle-check"></i> Bài tập thực hành sát sườn</span>
+      <span class="benefit-tag"><i class="fa-solid fa-circle-check"></i> Cập nhật nội dung liên tục</span>
+      <span class="benefit-tag"><i class="fa-solid fa-circle-check"></i> Hỗ trợ giải đáp tận tình</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- WORKFLOW                                                            -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section id="workflow" class="section-py">
+  <div class="container">
+    <h2 class="section-title">QUY TRÌNH <span class="gradient-text">LÀM VIỆC</span></h2>
+
+    <div class="timeline reveal">
+      <div class="timeline-line-desktop"></div>
+      <div class="timeline-line-mobile"></div>
+
+      <div class="timeline-steps">
+
+        <div class="timeline-step">
+          <div class="glass-card timeline-card">
+            <div class="timeline-card-head">
+              <div class="timeline-icon-wrap"><i class="fa-solid fa-comment"></i></div>
+              <h3>Liên hệ</h3>
+            </div>
+            <p>Khách hàng liên hệ qua Discord hoặc TikTok.</p>
+          </div>
+          <div class="timeline-node"><span>01</span></div>
+          <div class="timeline-spacer"></div>
+        </div>
+
+        <div class="timeline-step right">
+          <div class="glass-card timeline-card">
+            <div class="timeline-card-head">
+              <div class="timeline-icon-wrap"><i class="fa-solid fa-phone"></i></div>
+              <h3>Tư vấn</h3>
+            </div>
+            <p>Thảo luận yêu cầu và tư vấn giải pháp tối ưu.</p>
+          </div>
+          <div class="timeline-node"><span>02</span></div>
+          <div class="timeline-spacer"></div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="glass-card timeline-card">
+            <div class="timeline-card-head">
+              <div class="timeline-icon-wrap"><i class="fa-solid fa-square-check"></i></div>
+              <h3>Xác nhận</h3>
+            </div>
+            <p>Chốt phương án, báo giá và thời gian hoàn thành.</p>
+          </div>
+          <div class="timeline-node"><span>03</span></div>
+          <div class="timeline-spacer"></div>
+        </div>
+
+        <div class="timeline-step right">
+          <div class="glass-card timeline-card">
+            <div class="timeline-card-head">
+              <div class="timeline-icon-wrap"><i class="fa-solid fa-credit-card"></i></div>
+              <h3>Thanh toán</h3>
+            </div>
+            <p>Tiến hành thanh toán theo thỏa thuận.</p>
+          </div>
+          <div class="timeline-node"><span>04</span></div>
+          <div class="timeline-spacer"></div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="glass-card timeline-card">
+            <div class="timeline-card-head">
+              <div class="timeline-icon-wrap"><i class="fa-solid fa-circle-play"></i></div>
+              <h3>Thực hiện</h3>
+            </div>
+            <p>HMCTricker tiến hành triển khai dịch vụ.</p>
+          </div>
+          <div class="timeline-node"><span>05</span></div>
+          <div class="timeline-spacer"></div>
+        </div>
+
+        <div class="timeline-step right">
+          <div class="glass-card timeline-card">
+            <div class="timeline-card-head">
+              <div class="timeline-icon-wrap"><i class="fa-solid fa-box-open"></i></div>
+              <h3>Bàn giao</h3>
+            </div>
+            <p>Nghiệm thu và bàn giao kết quả cho khách hàng.</p>
+          </div>
+          <div class="timeline-node"><span>06</span></div>
+          <div class="timeline-spacer"></div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="glass-card timeline-card">
+            <div class="timeline-card-head">
+              <div class="timeline-icon-wrap"><i class="fa-solid fa-headphones"></i></div>
+              <h3>Hỗ trợ</h3>
+            </div>
+            <p>Bảo hành và hỗ trợ kỹ thuật sau dịch vụ.</p>
+          </div>
+          <div class="timeline-node"><span>07</span></div>
+          <div class="timeline-spacer"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- FAQ                                                                 -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section id="faq" class="section-py">
+  <div class="container" style="max-width:768px;">
+    <h2 class="section-title">CÂU HỎI <span class="gradient-text">THƯỜNG GẶP</span></h2>
+
+    <div class="faq-search-wrap">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input id="faq-search" class="faq-search" type="text" placeholder="Tìm câu hỏi..." />
+    </div>
+
+    <div class="faq-category-chips">
+      <button class="faq-cat-chip active" data-cat="Tất cả">Tất cả</button>
+      <button class="faq-cat-chip" data-cat="Giới thiệu">Giới thiệu</button>
+      <button class="faq-cat-chip" data-cat="Dịch vụ">Dịch vụ</button>
+      <button class="faq-cat-chip" data-cat="Khóa học">Khóa học</button>
+      <button class="faq-cat-chip" data-cat="Thanh toán">Thanh toán</button>
+      <button class="faq-cat-chip" data-cat="Hỗ trợ">Hỗ trợ</button>
+      <button class="faq-cat-chip" data-cat="Kỹ thuật">Kỹ thuật</button>
+    </div>
+
+    <div class="faq-list reveal">
+
+      <div class="glass-card faq-item" data-cat="Giới thiệu" data-q="HMCTricker là gì?" data-a="Thương hiệu cá nhân của Hoàng Minh Chiến Tricker, chuyên phát triển website, lập trình, Facebook Marketing, chia sẻ kiến thức công nghệ.">
+        <button class="faq-question">HMCTricker là gì? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer"><p>Thương hiệu cá nhân của Hoàng Minh Chiến Tricker, chuyên phát triển website, lập trình, Facebook Marketing, chia sẻ kiến thức công nghệ.</p></div>
+      </div>
+
+      <div class="glass-card faq-item" data-cat="Giới thiệu" data-q="Ai đứng sau HMCTricker?" data-a="Hoàng Minh Chiến Tricker là người sáng lập và trực tiếp quản lý.">
+        <button class="faq-question">Ai đứng sau HMCTricker? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer"><p>Hoàng Minh Chiến Tricker là người sáng lập và trực tiếp quản lý.</p></div>
+      </div>
+
+      <div class="glass-card faq-item" data-cat="Giới thiệu" data-q="Có cộng đồng Discord không?" data-a="Có. Discord là nơi cập nhật thông báo và hỗ trợ thành viên.">
+        <button class="faq-question">Có cộng đồng Discord không? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer"><p>Có. Discord là nơi cập nhật thông báo và hỗ trợ thành viên.</p></div>
+      </div>
+
+      <div class="glass-card faq-item" data-cat="Dịch vụ" data-q="Xem bảng giá ở đâu?" data-a="Trong mục Dịch vụ, phân loại theo từng nhóm cụ thể trên website.">
+        <button class="faq-question">Xem bảng giá ở đâu? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer"><p>Trong mục Dịch vụ, phân loại theo từng nhóm cụ thể trên website.</p></div>
+      </div>
+
+      <div class="glass-card faq-item" data-cat="Dịch vụ" data-q="Làm sao liên hệ tư vấn?" data-a="Bạn có thể tham gia Discord hoặc liên hệ qua kênh TikTok chính thức.">
+        <button class="faq-question">Làm sao liên hệ tư vấn? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer"><p>Bạn có thể tham gia Discord hoặc liên hệ qua kênh TikTok chính thức.</p></div>
+      </div>
+
+      <div class="glass-card faq-item" data-cat="Dịch vụ" data-q="Có nhận dự án riêng không?" data-a="Có. Chúng tôi nhận dự án lập trình, thiết kế web và tư vấn kỹ thuật chuyên sâu.">
+        <button class="faq-question">Có nhận dự án riêng không? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer"><p>Có. Chúng tôi nhận dự án lập trình, thiết kế web và tư vấn kỹ thuật chuyên sâu.</p></div>
+      </div>
+
+      <div class="glass-card faq-item" data-cat="Khóa học" data-q="Người mới hoàn toàn có học được không?" data-a="Có. Khóa Lập trình cơ bản được thiết kế đặc biệt dành cho người chưa có nền tảng.">
+        <button class="faq-question">Người mới hoàn toàn có học được không? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer"><p>Có. Khóa Lập trình cơ bản được thiết kế đặc biệt dành cho người chưa có nền tảng.</p></div>
+      </div>
+
+      <div class="glass-card faq-item" data-cat="Khóa học" data-q="Sau khi học có làm được website không?" data-a="Có. Học viên sẽ thực hành các dự án mẫu hoàn chỉnh và có thể tự build website thực tế.">
+        <button class="faq-question">Sau khi học có làm được website không? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer"><p>Có. Học viên sẽ thực hành các dự án mẫu hoàn chỉnh và có thể tự build website thực tế.</p></div>
+      </div>
+
+      <div class="glass-card faq-item" data-cat="Thanh toán" data-q="Thanh toán xong bao lâu được xác nhận?" data-a="Thường trong thời gian rất ngắn sau khi chúng tôi kiểm tra giao dịch thành công.">
+        <button class="faq-question">Thanh toán xong bao lâu được xác nhận? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer"><p>Thường trong thời gian rất ngắn sau khi chúng tôi kiểm tra giao dịch thành công.</p></div>
+      </div>
+
+      <div class="glass-card faq-item" data-cat="Hỗ trợ" data-q="Nếu gặp lỗi thì sao?" data-a="Liên hệ ngay qua Discord hoặc TikTok để được kỹ thuật viên kiểm tra và hỗ trợ xử lý.">
+        <button class="faq-question">Nếu gặp lỗi thì sao? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer"><p>Liên hệ ngay qua Discord hoặc TikTok để được kỹ thuật viên kiểm tra và hỗ trợ xử lý.</p></div>
+      </div>
+
+      <div class="glass-card faq-item" data-cat="Kỹ thuật" data-q="Website có hoạt động trên điện thoại không?" data-a="Có. Mọi sản phẩm đều được thiết kế theo chuẩn Mobile First tương thích mọi thiết bị.">
+        <button class="faq-question">Website có hoạt động trên điện thoại không? <i class="fa-solid fa-plus"></i></button>
+        <div class="faq-answer"><p>Có. Mọi sản phẩm đều được thiết kế theo chuẩn Mobile First tương thích mọi thiết bị.</p></div>
+      </div>
+
+      <div id="no-faqs">Không tìm thấy câu hỏi phù hợp.</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- DISCORD CTA                                                         -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section id="discord-cta" class="section-py">
+  <div class="container">
+    <div class="glass-card discord-cta-inner reveal" style="border-color:rgba(124,58,237,0.3);box-shadow:0 0 30px rgba(124,58,237,0.15);">
+      <h2 class="discord-cta-title">SẴN SÀNG <span class="gradient-text">BẮT ĐẦU?</span></h2>
+      <p class="discord-cta-desc">Tham gia cộng đồng Discord hoặc liên hệ qua TikTok để được tư vấn nhanh nhất các dịch vụ và khóa học.</p>
+      <div class="discord-cta-btns">
+        <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="cta-discord-btn">
+          <i class="fa-brands fa-discord"></i> Tham gia Discord
+        </a>
+        <a href="https://www.tiktok.com/@hmctricker" target="_blank" rel="noreferrer" class="cta-tiktok-btn">
+          <i class="fa-brands fa-tiktok"></i> Liên hệ TikTok
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- CONTACT                                                             -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section id="contact" class="section-py">
+  <div class="container">
+    <h2 class="section-title">LIÊN HỆ <span class="gradient-text">CHÚNG TÔI</span></h2>
+    <div class="contact-grid reveal">
+
+      <!-- Discord Card -->
+      <div class="glass-card contact-card" style="border-color:rgba(124,58,237,0.3);">
+        <div class="contact-icon-circle" style="background:rgba(124,58,237,0.1);border:1px solid var(--accent-purple);color:var(--accent-purple);">
+          <i class="fa-brands fa-discord"></i>
+        </div>
+        <h3>Cộng đồng Discord</h3>
+        <p>Nơi trao đổi, cập nhật thông tin và nhận hỗ trợ nhanh nhất từ HMCTricker.</p>
+        <div class="contact-btns">
+          <button id="copy-discord" onclick="copyLink('https://discord.gg/mMfgxe4Mr9','discord')" class="btn-outline" style="border-color:var(--accent-purple);color:var(--accent-purple);">
+            <i class="fa-regular fa-copy"></i> Sao chép
+          </button>
+          <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="btn-primary" style="background:var(--accent-purple);box-shadow:none;">
+            Mở <i class="fa-solid fa-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- TikTok Card -->
+      <div class="glass-card contact-card" style="border-color:rgba(192,38,211,0.3);">
+        <div class="contact-icon-circle" style="background:rgba(192,38,211,0.1);border:1px solid var(--neon-magenta);color:var(--neon-magenta);">
+          <i class="fa-brands fa-tiktok"></i>
+        </div>
+        <h3>TikTok Chính Thức</h3>
+        <p>Theo dõi để nhận các tips công nghệ, thủ thuật marketing và khóa học mới.</p>
+        <div class="contact-btns">
+          <button id="copy-tiktok" onclick="copyLink('https://www.tiktok.com/@hmctricker','tiktok')" class="btn-outline">
+            <i class="fa-regular fa-copy"></i> Sao chép
+          </button>
+          <a href="https://www.tiktok.com/@hmctricker" target="_blank" rel="noreferrer" class="btn-primary" style="background:var(--neon-magenta);color:#000;box-shadow:none;">
+            Mở <i class="fa-solid fa-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- FOOTER                                                              -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div>
+        <img class="footer-logo" src="assets/images/logo.png" alt="HMCTricker" />
+        <p class="footer-brand-text">Thương hiệu công nghệ cá nhân chuyên cung cấp dịch vụ Facebook Marketing, TikTok Marketing, Website Development và đào tạo lập trình.</p>
+        <p class="footer-made">Made with <span>❤</span> by<br/>Hoàng Minh Chiến Tricker</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Liên kết nhanh</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Trang chủ</a></li>
+          <li><a href="#services">Dịch vụ</a></li>
+          <li><a href="#courses">Khóa học</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+      </div>
+
+      <!-- Community -->
+      <div class="footer-col">
+        <h4>Cộng đồng</h4>
+        <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="footer-social-link">
+          <i class="fa-brands fa-discord"></i> Discord Official
+        </a>
+        <a href="https://www.tiktok.com/@hmctricker" target="_blank" rel="noreferrer" class="footer-social-link" style="color:var(--text-sub);">
+          <i class="fa-brands fa-tiktok"></i> TikTok Channel
+        </a>
+      </div>
+
+      <!-- Info -->
+      <div class="footer-col">
+        <h4>Thông tin</h4>
+        <ul class="footer-links">
+          <li>Copyright &copy; 2026 HMCTricker</li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>SYS.STATUS: ONLINE | NETWORK: SECURE</p>
+      <div class="footer-dots">
+        <span class="footer-dot" style="background:var(--success);"></span>
+        <span class="footer-dot" style="background:var(--success);"></span>
+        <span class="footer-dot" style="background:var(--success);"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- FLOATING BUTTONS                                                    -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="floating-btns">
+  <a href="https://discord.gg/mMfgxe4Mr9" target="_blank" rel="noreferrer" class="floating-btn float-discord" aria-label="Join Discord">
+    <i class="fa-brands fa-discord"></i>
+  </a>
+  <a href="https://www.tiktok.com/@hmctricker" target="_blank" rel="noreferrer" class="floating-btn float-tiktok" aria-label="Visit TikTok">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+  <button id="back-to-top" class="floating-btn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<!-- Cursor Glow -->
+<div id="cursor-glow"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- BACKGROUND MUSIC (YouTube, hidden player)                          -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="yt-player-container" style="position:fixed;width:0;height:0;overflow:hidden;">
+  <div id="yt-player"></div>
+</div>
+<button id="music-toggle" aria-label="Bật/tắt nhạc nền" title="Bật/tắt nhạc nền">
+  <i class="fa-solid fa-music"></i>
+</button>
+
+<!-- Script -->
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
